@@ -1,0 +1,65 @@
+for x in range(1,20,1):
+    print(x)
+print("Fin del programa")
+
+for x in range(19,0,-1):
+    print(x)
+print("Fin del programa")
+
+#Ejemplo 3.3
+CUECER = 0
+NUM = 0
+N = int(input("Introduce un valor numerico mayor que 1: "))
+for i in range(1,N+1,1): 
+    N = int(input("Introduce un valor numerico: "))
+    if N == 0:
+        CUECER += 1
+print("Cuecer =",CUECER)
+
+for f in range( 1,11): 
+    print(f"7 x {f} = {7 * f}")
+    
+N1=int(input('ingresa un valor entre 1 y 5: '))
+
+if N1>0 and N1<=5:
+    N2=int(input(f'ingresa un valor entre el 2 y 10: '))
+    if N2>= N1 and N2 <= 10:
+
+        for i in range( N1, N2+1):
+            for j in range(0,11):
+                print(f"{i} x {j} = ", i*j)
+            print("-------------------->")
+    else:
+        print('El valor ingresado no esta dentro del rango')
+else:
+    print('El valor ingresado no esta dentro del rango')
+  
+#Generadores de listas
+numeros=[0,0,0,0,0]
+print(numeros)
+numeros = [0 for x in range(5)]
+print(numeros)
+#Empleando la variable de control x para el valor inicial
+numeros = [x for x in range(5)]
+print(numeros)
+#[10,20,30,40,50,60,70,80,90,100]
+numeros = [ x for x in range(10,101,10) ]
+print(numeros)
+
+# Calcular promedio de edades
+suma=0
+edades=[0 for x in range(5)]
+for x in range(5):
+    edades[x]=int(input("Dame una edad: "))
+    suma=suma+edades[x]
+print(edades)
+print("promedio: ", suma/5)
+
+import random
+print(random.random())
+print(random.uniform(5,11))
+val = round(random.uniform(5,11) , 2 )
+print(val)
+
+valores = [random.uniform(5,11) for x in range(20)]
+print(valores)
